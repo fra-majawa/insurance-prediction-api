@@ -1,0 +1,93 @@
+%%%%%%%% Title slide details %%%%%%%%%%%%%%
+
+
+% Background Image
+\newcommand{\myBackround}
+{
+    \includegraphics[width=\paperwidth]{Background 2.png}
+}
+
+% Title
+\newcommand{\myTitle}
+{
+    Application Programming Interface
+}
+
+% Subtitle
+\newcommand{\mySubTitle}
+{
+    % APIs make the world go round(easier)
+    What's in it for a Data Scientist
+}
+
+% Author
+\newcommand{\myAuthor}   
+{
+    Francis Jeremiah Majawa 
+}
+
+% Affiliation
+\newcommand{\myAffiliate}
+{
+  Supervisor: Dr. D. Matekenya
+}
+
+% Presentation Date
+\newcommand{\myDate}   
+{
+    \today
+}
+
+% Logo
+\newcommand{\myLogo}   
+{
+    \includegraphics[width=1cm]{Logo.png}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%% Title slide code %%%%%%%%%%%
+\begin{tikzpicture}[remember picture,overlay]
+
+% Background image
+\node[above right,inner sep=0pt] at (current page.south west)
+    {
+        \myBackround
+    };
+    
+% Title & Subtitle
+\node
+[
+    above=0.5cm,
+    align=center,
+    fill=black!10,
+    rounded corners,
+    inner xsep=15pt,
+    inner ysep=10pt, 
+    minimum width=0.7\textwidth,
+    text width=0.6\textwidth
+] (title) at (current page.center)
+{
+    \LARGE \myTitle  \\[5pt]
+    \small \mySubTitle
+};
+
+% Author 
+\node[ below=0.5cm] (author) at (title.south){\myAuthor};
+
+% Author 
+\node[ below=0.25cm ](affiliate) at (author.south){\small \myAffiliate};
+
+% Date
+\node[below=0.25] (date) at (affiliate.south){\large \myDate};
+
+% Logo
+\node
+[
+    below =0.25cm
+] at (date.south)
+{
+    %\myLogo
+};
+
+\end{tikzpicture}
