@@ -1,6 +1,6 @@
 - The project is a demo for a class presentation in which I was asked by my lecturer to do a small demo on how we can use api as a way of deploying our machine learning model into production.
 - This demo is simplest one I could create given the limited time I had
-- I used FastAPI framework to build the API and link it with the model
+- I used FastAPI framework to build the API and link it to the model
 - I also used Streamlit as a frontend
 - Below is the architure of the application
 
